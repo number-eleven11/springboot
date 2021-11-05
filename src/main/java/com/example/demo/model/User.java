@@ -8,6 +8,15 @@ public class User {
     private Long gmtModified;
     private String token;
 
+    public String getLogin (){
+        return name;
+    }
+
+    public void setLogin(String name){
+        this.name = name;
+    }
+
+
     public String getToken() {
         return token;
     }
