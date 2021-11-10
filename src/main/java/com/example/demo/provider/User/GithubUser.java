@@ -1,5 +1,8 @@
 package com.example.demo.provider.User;
 
+import lombok.Data;
+
+@Data
 public class GithubUser {
     public String getLogin() {
         return login;
@@ -29,6 +32,7 @@ public class GithubUser {
     private String login;
     private Long id;
     private String bio;
+    private String avatar_url;
 
     @Override
     public String toString() {
