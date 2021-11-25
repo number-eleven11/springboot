@@ -17,9 +17,9 @@ public class GithubProvider {
         MediaType mediaType = MediaType.get("application/json; charset=utf-8");
 
         OkHttpClient client = new OkHttpClient.Builder()
-                .connectTimeout(60 * 10000, TimeUnit.MILLISECONDS)
-                .readTimeout(5 * 60 * 10000, TimeUnit.MILLISECONDS)
-                .writeTimeout(5 * 60 * 10000, TimeUnit.MILLISECONDS)
+                .connectTimeout(60 * 100000, TimeUnit.MILLISECONDS)
+                .readTimeout(5 * 60 * 100000, TimeUnit.MILLISECONDS)
+                .writeTimeout(5 * 60 * 100000, TimeUnit.MILLISECONDS)
                 .build();
 
         RequestBody body = RequestBody.create(mediaType, JSON.toJSONString(accessTokenDTO));
