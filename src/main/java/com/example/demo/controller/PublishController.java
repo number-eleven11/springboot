@@ -48,6 +48,7 @@ public class PublishController {
             @RequestParam(value="description",required = false) String description,
             @RequestParam(value = "tag",required = false) String tag,
             @RequestParam(value = "id", required = false) Integer id,
+            @RequestParam(value = "delete", required = false, defaultValue = "No") String delete,
             HttpServletRequest request,
             Model model
     ){
@@ -91,6 +92,12 @@ public class PublishController {
         question.setId(id);
 
         questionService.createOrUpdate(question);
+
+        if (delete == "yes") {
+            questionService.deleteQuestion(id);
+            System.out.println("已删除");
+        }
+
         return "redirect:/";
     }
 }

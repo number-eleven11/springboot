@@ -28,4 +28,7 @@ public interface QuestionMapper {
 
     @Update("update question set title = #{title}, description = #{description}, gmt_modified= #{gmtModified}, tag= #{tag} where id = #{id}")
     void update(Question question);
+
+    @Delete("delete from question where id = #{id}")
+    void delete(@Param("id") Integer id);
 }

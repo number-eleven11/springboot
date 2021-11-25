@@ -94,4 +94,9 @@ public class QuestionService {
             questionMapper.update(question);
         }
     }
+
+    public void deleteQuestion(Integer id) {
+        questionMapper.delete(id);
+    }
+
 }

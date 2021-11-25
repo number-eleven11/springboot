@@ -25,5 +25,13 @@ public class QuestionController {
         model.addAttribute("question",questionDTO);
         return "question";
     }
+
+    @GetMapping("/delete/{id}")
+    public String questionDelete(@PathVariable(name = "id") Integer id
+    ){
+        questionService.deleteQuestion(id);
+        return "redirect:/";
+    }
+
 }
 
